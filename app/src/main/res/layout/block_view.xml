@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="400dp"
+    android:background="@drawable/border"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_top"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/text_view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/frame_top"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/margin_top_bottom"
+        android:layout_toEndOf="@+id/frame_top"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/top_text" />
+
+    <TextView
+        android:id="@+id/text_view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/frame_top"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/margin_top_bottom"
+        android:layout_toEndOf="@+id/frame_top"
+        android:ellipsize="middle"
+        android:lines="1"
+        android:text="@string/bottom_text" />
+
+    <FrameLayout
+        android:id="@+id/frame_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/frame_top"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:background="@android:color/darker_gray" />
+
+</RelativeLayout>
